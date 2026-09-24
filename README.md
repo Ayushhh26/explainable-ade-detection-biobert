@@ -1,4 +1,4 @@
-# Revolutionizing Clinical Safety: Explainable AI for Adverse Drug Event Detection
+# Explainable ADE Detection with BioBERT
 
 > Extending ADE detection with Explainable Counterfactuals, BioBERT,
 > and a multi-method XAI battery (SHAP, LIME, Integrated Gradients,
@@ -173,7 +173,7 @@ just the Family A / B / C, statistical, and XAI cells in a few minutes.
 2. Browse the JSON files at the root and inside `Result/` and `output/`,
    plus the PNGs in `Result/`. Every reported number lives in one of these
    files and can be loaded with `json.load` or `jq`. The mapping between
-   paper claims and result files is in [Outputs Reference](#outputs-reference)
+   reported findings and result files is in [Outputs Reference](#outputs-reference)
    below.
 
 ## Detailed Setup
@@ -283,8 +283,8 @@ enables a per-sentence McNemar test with no row-alignment ambiguity.
 
 ### Error patterns (`Result/error_patterns.json`)
 
-Family A flip rates are remarkably uniform across confounders, which strengthens the
-"the model has truly learned drug-conditional behaviour" reading:
+Family A flip rates are remarkably uniform across confounders. The results suggest
+the model learned drug-conditional behaviour:
 
 | Stratum | n | Flip rate |
 |---|---|---|
